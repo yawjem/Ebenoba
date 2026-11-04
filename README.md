@@ -17,7 +17,7 @@ Push to GitHub, import in Vercel, add the env vars from `.env.example`. Set `NEX
 - Colours: `src/app/globals.css`; logo: `public/logo.png`
 
 ## Forms
-Contact, seller enquiry, partnership and newsletter forms post to `/api/forms`, with honeypot spam protection. They email the team through Resend once `RESEND_API_KEY` is set; until then they are only logged.
+Contact, seller enquiry, partnership and newsletter forms post to `/api/forms`, with honeypot spam protection. Enquiries are emailed to the team through Brevo once `BREVO_API_KEY` is set (the sender address must be verified in Brevo). Newsletter signups are added to the Brevo list in `BREVO_LIST_ID`. Until the key is set, submissions are only logged.
 
 ## Later (not built here)
 Supabase + admin dashboard (a full version exists in `ebenoba-web-with-admin.zip`), Turnstile, Sentry, live chat, Search Console verification.

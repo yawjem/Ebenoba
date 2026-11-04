@@ -10,9 +10,13 @@ export default async function About() {
   const c = await getSettings();
   return (
     <>
-      <PageHero title="About Ebenoba" text="A connected digital marketplace built to simplify commerce for buyers and businesses." />
-      <Section title="Our story"><p className="max-w-3xl whitespace-pre-line text-ink/80">{c.about_story}</p></Section>
-      <Section title="Who we are" tint><p className="max-w-3xl whitespace-pre-line text-ink/80">{c.about_who}</p></Section>
+      <PageHero title="Making Commerce Simpler. Connecting Opportunities." text="Ebenoba is a digital commerce platform built around one simple idea: making it easier for people to discover businesses, find products and connect with sellers, while giving businesses new opportunities to reach customers and grow." />
+      <Section title="Our story" intro="A better way to connect commerce.">
+        <div className="max-w-3xl space-y-4 text-ink/80">{c.about_story.split("\n\n").map((t, i) => <p key={i}>{t}</p>)}</div>
+      </Section>
+      <Section title="About Ebenoba" tint>
+        <div className="max-w-3xl space-y-4 text-ink/80">{c.about_who.split("\n\n").map((t, i) => <p key={i}>{t}</p>)}</div>
+      </Section>
       <Section>
         <div className="grid gap-6 md:grid-cols-2">
           <div className="card"><h2 className="text-xl font-bold text-ember-600">Our mission</h2><p className="mt-2">{c.about_mission}</p></div>

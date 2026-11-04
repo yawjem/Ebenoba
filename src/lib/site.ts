@@ -2,21 +2,19 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.ebenoba
 export const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "/marketplace";
 export const SELLER_URL = process.env.NEXT_PUBLIC_SELLER_SIGNUP_URL || "/sell#enquiry";
 
-// Placeholder contact details: replace once supplied by Ebenoba.
+// Official contact details supplied by Ebenoba.
 export const CONTACT = {
   name: "Ebenoba",
-  email: process.env.CONTACT_TO_EMAIL || "hello@ebenoba.com",
-  phone: "+000 000 000 000",
-  whatsapp: "https://wa.me/000000000000",
-  address: "Address to be confirmed",
-  hours: "Mon – Fri, 8:00 – 17:00",
+  email: process.env.CONTACT_TO_EMAIL || "ebenoba56@gmail.com",
+  phone: "+233 24 203 0200",
+  whatsapp: "https://wa.me/233242030200",
+  address: "Plt 70 Blk G, Mpatasie, Kumasi (opposite the SDA church)",
+  hours: "Online marketplace open 24/7. Customer support: Mon – Fri, 8:00 – 17:00 (GMT)",
 };
 
 export const SOCIALS = [
-  { name: "Facebook", href: "#" },
-  { name: "Instagram", href: "#" },
-  { name: "X", href: "#" },
-  { name: "LinkedIn", href: "#" },
+  { name: "TikTok", href: "https://www.tiktok.com/@ebenezerantwi123" },
+  { name: "X", href: "https://x.com/antwi_eben" },
 ];
 
 export const NAV = [
@@ -37,13 +35,13 @@ export const FOOTER = [
   { title: "Legal", links: [["Privacy Policy", "/privacy"], ["Terms of Use", "/terms"], ["Cookie Policy", "/cookies"], ["Accessibility", "/accessibility"]] },
 ] as const;
 
-export const CATEGORIES = ["Fashion & Apparel", "Electronics", "Home & Living", "Groceries & Food", "Beauty & Health", "Phones & Gadgets", "Baby & Kids", "Services"];
+export const CATEGORIES = ["Fashion & Apparel", "Electronics", "Home & Living", "Groceries & Food", "Beauty & Health", "Phones & Gadgets", "Auto", "Baby & Kids", "Services"];
 
 export const FAQS = [
   { q: "What is Ebenoba?", a: "Ebenoba is a connected digital marketplace where buyers discover products from many businesses in one place." },
   { q: "How do I place an order?", a: "Open the Ebenoba application, browse products or businesses, add items and check out. Delivery options are shown at checkout." },
   { q: "How do I become a seller?", a: "Visit the Become a Seller page, review the requirements and register, or send an enquiry if you'd like more information first." },
-  { q: "How much does it cost to sell?", a: "Commission and any subscription options will be published on the Become a Seller page. Contact us for current details." },
+  { q: "How much does it cost to sell?", a: "Ebenoba charges a commission on each sale. It is dynamic and ranges from 9% to 20% depending on the product category. Contact us for the rate that applies to your products." },
   { q: "Can I track my order?", a: "Eligible orders can be tracked in the application, with delivery notifications along the way." },
   { q: "How do I contact support?", a: "Use the contact form, email us or message us on WhatsApp. Choose the enquiry category that best fits." },
 ];

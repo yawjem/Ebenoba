@@ -49,7 +49,7 @@ export default async function Privacy() {
         <p>We share personal data only with service providers that help us run the website, under appropriate safeguards, and only as needed:</p>
         <ul>
           <li><strong>Hosting and infrastructure</strong> (for example Vercel) to deliver the website.</li>
-          <li><strong>Email delivery</strong> (for example Resend) to send form submissions to our team and, where relevant, our newsletters.</li>
+          <li><strong>Email delivery and newsletters</strong> (Brevo) to send form submissions to our team and to manage and send our newsletter.</li>
           <li><strong>Analytics</strong> (Google Analytics, when enabled) to understand how the website is used.</li>
           <li><strong>Professional advisers, regulators and law enforcement</strong> where we are legally required or need to protect our rights.</li>
           <li><strong>A successor organisation</strong> if Ebenoba is involved in a merger, acquisition or restructuring, with notice to you where required.</li>

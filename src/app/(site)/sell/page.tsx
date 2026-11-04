@@ -18,8 +18,8 @@ const faqs = [
 export default function Sell() {
   return (
     <>
-      <PageHero title="Sell on Ebenoba" text="Turn your business into an online storefront and reach customers across one connected marketplace.">
-        <Link href={SELLER_URL} className="btn btn-primary">Join Ebenoba</Link>
+      <PageHero title="Sell on Ebenoba" text="Are you a Ghanaian entrepreneur, a business owner or a trader looking to scale up your brand and improve visibility? Join the Ebenoba Force.">
+        <Link href={SELLER_URL} className="btn btn-primary">Join the Ebenoba Force</Link>
       </PageHero>
       <Section id="benefits" title="Why sell on Ebenoba?">
         <Cards items={[
@@ -34,11 +34,10 @@ export default function Sell() {
       <Section title="How it works" tint>
         <Cards items={[{ title: "1. Register", text: "Create your seller account." }, { title: "2. List products", text: "Set up your storefront." }, { title: "3. Sell and deliver", text: "Receive orders and fulfil them." }]} />
       </Section>
-      <Section title="Commission, subscriptions and requirements">
-        <Cards cols={3} items={[
-          { title: "Commission", text: "A clear explanation of marketplace commission will be published here." },
-          { title: "Subscriptions", text: "Subscription options, if applicable, will be listed here." },
-          { title: "Requirements", text: "Business details, product information and contact details. Final list to be confirmed." },
+      <Section title="Commission and requirements">
+        <Cards cols={2} items={[
+          { title: "Commission", text: "Ebenoba charges a commission on each sale. The rate is dynamic and ranges from 9% to 20% depending on the product category." },
+          { title: "Requirements", text: "Business details, product information and contact details." },
         ]} />
       </Section>
       <Section id="enquiry" title="Seller enquiry" intro="Want to know more before registering? Send us your details." tint>

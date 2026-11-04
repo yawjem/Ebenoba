@@ -11,7 +11,7 @@ const t = (a: string[]) => a.map((title) => ({ title }));
 export default function Services() {
   return (
     <>
-      <PageHero title="Our services" text="Everything Ebenoba offers across shopping, selling, business growth and delivery." />
+      <PageHero title="Our services" text="Whether you're shopping for something you need, looking to grow your business or searching for new commercial opportunities, Ebenoba is working to bring the different sides of commerce closer together." />
       <Section title="For customers"><Cards items={t(["Discover products from multiple businesses", "Explore different product categories", "Compare available offers", "Shop conveniently", "Access promotional deals", "Track eligible orders"])} /></Section>
       <Section title="For sellers" tint><Cards items={t(["Establish an online storefront", "Reach more customers", "Showcase products", "Manage orders", "Monitor business performance", "Participate in promotional campaigns"])} /></Section>
       <Section title="For businesses"><Cards items={t(["Digital business exposure", "Marketing opportunities", "Customer acquisition", "Sales analytics", "Business growth opportunities"])} /></Section>
