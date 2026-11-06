@@ -37,16 +37,19 @@ const HERO: Record<string, { bg: string; blob: string }> = {
   dark: { bg: "bg-night text-white on-dark", blob: "bg-ember-500/30" },
 };
 
-export function PageHero({ title, text, children, tone = "ember" }: { title: string; text?: string; children?: ReactNode; tone?: "ember" | "gold" | "leaf" | "dark" }) {
+export function PageHero({ title, text, children, tone = "ember", aside }: { title: string; text?: string; children?: ReactNode; tone?: "ember" | "gold" | "leaf" | "dark"; aside?: ReactNode }) {
   const h = HERO[tone];
   return (
     <div className={`relative overflow-hidden ${h.bg}`}>
       <div className={`pointer-events-none absolute -right-16 -top-20 h-72 w-72 rounded-full ${h.blob}`} aria-hidden="true" />
       <div className={`pointer-events-none absolute -bottom-24 right-1/4 h-48 w-48 rounded-full ${tone === "dark" ? "bg-gold-400/15" : "bg-ember-600/10"}`} aria-hidden="true" />
-      <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">
-        <h1 className="fade-up max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h1>
-        {text && <p className={`fade-up mt-4 max-w-2xl text-lg ${tone === "dark" ? "text-white/80" : "text-ink/70"}`}>{text}</p>}
-        {children && <div className="fade-up mt-8 flex flex-wrap gap-3">{children}</div>}
+      <div className={`relative mx-auto max-w-6xl px-4 py-16 sm:py-20 ${aside ? "grid items-center gap-10 lg:grid-cols-2" : ""}`}>
+        <div>
+          <h1 className="fade-up max-w-3xl text-4xl font-extrabold tracking-tight sm:text-5xl">{title}</h1>
+          {text && <p className={`fade-up mt-4 max-w-2xl text-lg ${tone === "dark" ? "text-white/80" : "text-ink/70"}`}>{text}</p>}
+          {children && <div className="fade-up mt-8 flex flex-wrap gap-3">{children}</div>}
+        </div>
+        {aside && <div className="fade-up">{aside}</div>}
       </div>
     </div>
   );

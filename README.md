@@ -21,3 +21,6 @@ Contact, seller enquiry, partnership and newsletter forms post to `/api/forms`, 
 
 ## Later (not built here)
 Supabase + admin dashboard (a full version exists in `ebenoba-web-with-admin.zip`), Turnstile, Sentry, live chat, Search Console verification.
+
+## Analytics and cookies
+Google Analytics loads only after a visitor clicks Accept on the cookie banner. The banner appears only when `NEXT_PUBLIC_GA_ID` is set; without it the site sets no cookies and shows no banner. Visitors can change their choice from the Cookie Policy page.

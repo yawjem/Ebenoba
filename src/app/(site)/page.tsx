@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Banner, Cards, Section } from "@/components/ui";
+import { Gallery } from "@/components/Gallery";
 import { APP_URL, CATEGORIES, SELLER_URL } from "@/lib/site";
 import { getBanners, getTestimonials, seoFor } from "@/lib/content";
 
@@ -8,7 +9,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return seoFor("/", { title: "Ebenoba | Everything You Need. All in One Marketplace.", description: "Discover products, explore businesses and enjoy a convenient shopping experience. Ebenoba brings buyers and sellers together in one connected marketplace." });
 }
 
-const TILES = ["bg-ember-600 text-white", "bg-gold-400 text-ink", "bg-night text-white", "bg-leaf-600 text-white"];
 const STEP = ["bg-ember-600 text-white", "bg-gold-400 text-ink", "bg-leaf-600 text-white"];
 const CHIPS = [
   "border-ember-200 bg-white text-ember-700 hover:bg-ember-600 hover:text-white",
@@ -42,12 +42,7 @@ export default async function Home() {
             // eslint-disable-next-line @next/next/no-img-element
             <img src={hero.image_url} alt="" className="fade-up aspect-[4/3] w-full rounded-3xl object-cover shadow-xl" />
           ) : (
-            // Placeholder promo visual: swap for real shopping / business / delivery photography
-            <div className="fade-up grid grid-cols-2 gap-4" aria-hidden="true">
-              {["Shopping", "Businesses", "Deliveries", "Promotions"].map((t, i) => (
-                <div key={t} className={`grid aspect-square place-items-center rounded-3xl text-lg font-bold shadow-lg ${TILES[i]} ${i % 2 ? "translate-y-6" : ""}`}>{t}</div>
-              ))}
-            </div>
+            <div className="fade-up"><Gallery /></div>
           )}
         </div>
       </div>

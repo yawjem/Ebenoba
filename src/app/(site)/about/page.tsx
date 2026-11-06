@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { Gallery } from "@/components/Gallery";
 import { getSettings, seoFor } from "@/lib/content";
 import { Cards, PageHero, Section } from "@/components/ui";
+
+
+function LogoBand() {
+  return (
+    <section className="bg-white" aria-label="Ebenoba logo">
+      <div className="mx-auto flex max-w-6xl items-center gap-6 px-4 py-12">
+        <span className="h-px flex-1 bg-gradient-to-r from-transparent to-ember-200" aria-hidden="true" />
+        <Image src="/logo.png" alt="Ebenoba: Everything Commerce. Simplified." width={800} height={699} className="h-40 w-auto sm:h-52" />
+        <span className="h-px flex-1 bg-gradient-to-l from-transparent to-ember-200" aria-hidden="true" />
+      </div>
+    </section>
+  );
+}
 
 export async function generateMetadata(): Promise<Metadata> {
   return seoFor("/about", { title: "About Ebenoba", description: "Learn who Ebenoba is, what we believe and how we connect businesses and consumers in one marketplace." });
@@ -10,7 +25,8 @@ export default async function About() {
   const c = await getSettings();
   return (
     <>
-      <PageHero tone="gold" title="Making Commerce Simpler. Connecting Opportunities." text="Ebenoba is a digital commerce platform built around one simple idea: making it easier for people to discover businesses, find products and connect with sellers, while giving businesses new opportunities to reach customers and grow." />
+      <PageHero tone="gold" title="Making Commerce Simpler. Connecting Opportunities." text="Ebenoba is a digital commerce platform built around one simple idea: making it easier for people to discover businesses, find products and connect with sellers, while giving businesses new opportunities to reach customers and grow." aside={<Gallery />} />
+      <LogoBand />
       <Section title="Our story" intro="A better way to connect commerce.">
         <div className="max-w-3xl space-y-4 text-ink/80">{c.about_story.split("\n\n").map((t, i) => <p key={i}>{t}</p>)}</div>
       </Section>
