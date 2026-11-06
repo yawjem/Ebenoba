@@ -10,20 +10,20 @@ export default async function About() {
   const c = await getSettings();
   return (
     <>
-      <PageHero title="Making Commerce Simpler. Connecting Opportunities." text="Ebenoba is a digital commerce platform built around one simple idea: making it easier for people to discover businesses, find products and connect with sellers, while giving businesses new opportunities to reach customers and grow." />
+      <PageHero tone="gold" title="Making Commerce Simpler. Connecting Opportunities." text="Ebenoba is a digital commerce platform built around one simple idea: making it easier for people to discover businesses, find products and connect with sellers, while giving businesses new opportunities to reach customers and grow." />
       <Section title="Our story" intro="A better way to connect commerce.">
         <div className="max-w-3xl space-y-4 text-ink/80">{c.about_story.split("\n\n").map((t, i) => <p key={i}>{t}</p>)}</div>
       </Section>
-      <Section title="About Ebenoba" tint>
+      <Section title="About Ebenoba" tone="cream">
         <div className="max-w-3xl space-y-4 text-ink/80">{c.about_who.split("\n\n").map((t, i) => <p key={i}>{t}</p>)}</div>
       </Section>
       <Section>
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="card"><h2 className="text-xl font-bold text-ember-600">Our mission</h2><p className="mt-2">{c.about_mission}</p></div>
-          <div className="card"><h2 className="text-xl font-bold text-ember-600">Our vision</h2><p className="mt-2">{c.about_vision}</p></div>
+          <div className="card !border-0 bg-ember-600 text-white"><h2 className="text-xl font-bold text-gold-400">Our mission</h2><p className="mt-2">{c.about_mission}</p></div>
+          <div className="card !border-0 bg-night text-white"><h2 className="text-xl font-bold text-gold-400">Our vision</h2><p className="mt-2">{c.about_vision}</p></div>
         </div>
       </Section>
-      <Section title="Our values" tint>
+      <Section title="Our values" tone="gold">
         <Cards cols={4} items={[{ title: "Accessibility" }, { title: "Convenience" }, { title: "Trust" }, { title: "Growth" }]} />
       </Section>
       <Section title="What we're solving">
@@ -34,7 +34,7 @@ export default async function About() {
           { title: "Growth barriers", text: "Small businesses lack simple marketing and analytics tools." },
         ]} />
       </Section>
-      <Section title="How we empower businesses and shoppers" tint>
+      <Section title="How we empower businesses and shoppers" tone="leaf">
         <Cards cols={2} items={[
           { title: "For businesses", text: "Storefronts, exposure, promotions, order management and performance insights." },
           { title: "For shoppers", text: "Diverse selections, comparable offers, promotions and trackable delivery." },

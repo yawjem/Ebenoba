@@ -12,9 +12,9 @@ const TYPES = ["Retail business", "Wholesaler", "Logistics company", "Payment pr
 export default function Partnerships() {
   return (
     <>
-      <PageHero title="Partner with Ebenoba" text="We work with organizations that help us serve buyers and businesses better." />
+      <PageHero tone="gold" title="Partner with Ebenoba" text="We work with organizations that help us serve buyers and businesses better." />
       <Section title="Who we partner with"><Cards cols={4} items={TYPES.map((title) => ({ title }))} /></Section>
-      <Section id="proposal" title="Partnership proposal" tint>
+      <Section id="proposal" title="Partnership proposal" tone="leaf">
         <div className="max-w-xl">
           <Form type="partner" submitLabel="Submit proposal" fields={[
             { name: "name", label: "Contact name", required: true }, { name: "organization", label: "Organization", required: true },

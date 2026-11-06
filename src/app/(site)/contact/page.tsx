@@ -16,7 +16,7 @@ export default async function Contact({ searchParams }: { searchParams: Promise<
   const socials = socialsFrom(c);
   return (
     <>
-      <PageHero title="Contact us" text="We'd love to hear from you." />
+      <PageHero tone="gold" title="Contact us" text="We'd love to hear from you." />
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
           <div className="space-y-3 text-ink/80">

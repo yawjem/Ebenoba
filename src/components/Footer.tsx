@@ -7,7 +7,7 @@ import { Form } from "./Form";
 export default async function Footer() {
   const socials = socialsFrom(await getSettings());
   return (
-    <footer className="bg-ember-900 text-white/80">
+    <footer className="border-t-4 border-gold-400 bg-ember-900 text-white/80">
       <div className="mx-auto max-w-6xl px-4 py-14">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_3fr]">
           <div>
